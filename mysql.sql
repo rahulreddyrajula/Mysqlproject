@@ -1,0 +1,196 @@
+--    CREATE TABLE USER (
+--       user_id INTEGER NOT NULL PRIMARY KEY,
+--       name VARCHAR(250),
+--       gender varchar(10),
+--       age integer,
+--       country varchar(250),     
+--     premium_membership integer
+--    );
+
+   -- INSERT INTO USER(user_id,name,gender,age,country,premium_membership)
+   --  VALUES 
+   -- (2000,"John White",	"M",	63,	"AUSTRALIA",	1),
+   -- (2001,"John Andrews",	"M",	67,	"AUSTRALIA",	1),
+   -- (2002,	"April Robinson",	"F",	60,	"SRILANKA",	1),
+   -- (2003,	"Kathy Ryan",	"F",	81,	"SRILANKA",	0),
+   -- (2004,	"Megan Bradshaw",	"F",	53,	"AUSTRALIA",	1),
+   -- (2005,	"Melissa Sullivan",	"F",	45,	"BANGLADESH",	1),
+   -- (2006,	"Amber Smith",	"F",	97,	"BANGLADESH",	0),
+   -- (2007,	"Sara Higgins",	"F",	85,	"ENGLAND",	1),
+   -- (2008,	"Robert Taylor",	"M",	68,	"AMERICA",0),
+   -- (2009,	"William Wagner",	"M",	16,	"AMERICA",	0),
+   -- (2010,	"Herbert Mcdowell",	"M",	97,	"BANGLADESH",	1),
+   -- (2011,	"Brett Carter",	"M",	26,	"AUSTRALIA",	0),
+   -- (2012,	"Brian Knight","M",81,"AUSTRALIA",1),
+   -- (2013,	"Jennifer Johnson",	"F",	46,	"SRILANKA",	0),
+   -- (2014,	"Clarence Gonzales",	"M",	92,	"SRILANKA",	0),
+   -- (2015,	"Shirley Flores",	"F",	73,	"PAKISTAN",	1),
+   -- (2016,	"Patrick Taylor",	"M",	9,	"AUSTRALIA",	1),
+   -- (2017,	"Rebecca Anderson",	"F",	68,	"AUSTRALIA",	0);
+
+
+   --   CREATE TABLE channel (
+   --       channel_id INTEGER NOT NULL PRIMARY KEY,
+   --       name VARCHAR(250),
+   --       owner_id INTEGER NOT NULL
+   --   );
+
+--     INSERT INTO channel (channel_id,name,owner_id)
+--     VALUES 
+--  (350	,"Motivation grid"	,1011),
+--  (351	,"Marvel"	,1011),
+--  (352	,"Disney"	,1012),
+--  (353	,"Tedx"	,1013),
+--  (354	,"ETV"	,1011),
+--  (355	,"Maa"	,1012),
+--  (356	,"PewDiePie"	,1012),
+--  (357	,"VanossGaming"	,1013),
+--  (358	,"Markiplier"	,1013),
+--  (359	,"Ninja"	,1012),
+--  (360	,"WWE"	,1011),
+--  (361	,"Tech savvy"	,1011),
+--  (362	,"Marques Brownlee."	,1012),
+--  (363	,"The Verge"	,1013),
+--  (364	,"Android Authority"	,1011),
+--  (365	,"Learn Programming"	,1013),
+--  (366	,"News for you"	,1001),
+--  (367	,"Health care"	,1004);
+
+-- CREATE TABLE video(
+--     video_id INTEGER NOT NULL PRIMARY KEY,
+--     name VARCHAR(250),
+--     duration_in_sec integer,
+--     no_of_views integer,
+--     channel_id INTEGER ,
+--     FOREIGN key (channel_id) REFERENCES channel(channel_id)
+-- );
+
+-- INSERT INTO video(video_id,name,duration_in_sec,no_of_views,channel_id)
+
+-- VALUES
+-- (1000	,"Getting My Driver's License | Lele Pons"	,3652	,10619	,367),
+-- (1001	,"Apple iPhone X Review: The Best Yet!"	,4556	,140012	,362),
+-- (1002	,"Victoria Beckham Gives Strangers Fashion Advice for $2 in Central Park | Vanity Fair",836,75609,353),
+-- (1003	,"4 Reasons I Don't Like Thanksgiving || Mayim Bialik",	1751	,279351	,350),
+-- (1004	,"Maroon 5 - What Lovers Do (Live On The Ellen DeGeneres Show/2017)"	,3186	,94945	,354),
+-- (1005	,"Alicia Keys - When You Were Gone"	,3737	,	35526	,361),
+-- (1006	,"U.S. Navy Three Carrier Formation in Western Pacific Ocean"	,3538,	180973	,362),
+-- (1007	,"DIY - Simon's Cat  | NEW BLACK & WHITE!"	,1365	,106271	,355),
+-- (1008	,"You, but in emojis. (YIAY #375)"	,3874	,16469	,352),
+-- (1009	,"100 People Hold Their Breath for as Long as They Can",	2885,272102	,354),
+-- (1010	,"Luke Bryan - Hooked On It (Audio)"	,2106,184471,366),
+-- (1011	,"The perfect ice - Ice boats on Lake Geneva",2549,108047,352),
+-- (1012	,"5 Days Of Wearing DIY Makeup | Try Living With Lucie | Refinery29"	,3172,178623,358),
+-- (1013	,"Idiot's Guide to Japanese Squat Toilets",709	,44293	,356),
+-- (1014	,"UCLA men's basketball players discuss arrests in China"	,661,76223,359),
+-- (1015	,"Surprise After Surprise | October Vlog"	,3288,132277	,355),
+-- (1016	,"Canada Soccer's Women's National Team v USA International Friendly LIVE from Avaya Stadium, San Jose"	,1661,239292,356),
+-- (1017	,"F The Prom (2017) | Official Trailer HD"	,3327,51052	,359);
+
+-- CREATE TABLE USER_likes (
+--     user_id INTEGER,
+--     video_id INTEGER ,
+--     reaction_type VARCHAR(250),
+--     FOREIGN KEY (user_id) REFERENCES USER(user_id),
+--     FOREIGN KEY (video_id) REFERENCES video(video_id)
+-- );
+
+-- INSERT INTO USER_likes(user_id,video_id,reaction_type)
+-- VALUES
+-- (2141	,1529	,"LIKE"),
+-- (2234	,1529	,"LIKE"),
+-- (2245	,1529	,"DISLIKE"),
+-- (2570	,1529	,"LIKE"),
+-- (2544	,1529	,"LIKE"),
+-- (2560	,1529	,"LIKE"),
+-- (2002	,1529	,"LIKE"),
+-- (2118	,1529	,"LIKE"),
+-- (2535	,1529	,"LIKE"),
+-- (2212	,1529	,"LIKE"),
+-- (2519	,1529	,"DISLIKE"),
+-- (2552	,1529	,"LIKE"),
+-- (2863	,1529	,"DISLIKE"),
+-- (2851	,1529	,"LIKE"),
+-- (2154	,1529	,"LIKE"),
+-- (2475	,1529	,"LIKE"),
+-- (2707	,1529	,"LIKE"),
+-- (2694	,1529	,"LIKE");
+
+-- CREATE TABLE CHANNEL_USERS (
+--     channel_id INTEGER,
+--     user_id INTEGER,
+--     subscribed_date date ,
+--     FOREIGN KEY (channel_id) REFERENCES channel(channel_id),
+--     FOREIGN KEY (user_id) REFERENCES USER(user_id)
+-- )
+
+-- INSERT INTO CHANNEL_USERS(channel_id,user_id,subscribed_date)
+
+-- VALUES
+-- (376	,2521	,2018-02-06),
+-- (376	,2798	,2018-07-10),
+-- (376	,2644	,2017-11-11),
+-- (376	,2566	,2018-06-27),
+-- (376	,2578	,2017-12-26),
+-- (376	,2289	,2017-11-10),
+-- (376	,2997	,2017-09-26),
+-- (376	,2945	,2018-07-06),
+-- (376	,2476	,2018-05-13),
+-- (376	,2388	,2017-12-09),
+-- (376	,2432	,2017-12-04),
+-- (376	,2774	,2018-08-07),
+-- (376	,2024	,2018-04-10),
+-- (376	,2316	,2017-09-24),
+-- (376	,2614	,2018-02-23),
+-- (376	,2944	,2018-01-31),
+-- (376	,2478	,2017-12-26),
+-- (376	,2766	,2018-07-21);
+-- CREATE TABLE GENRE (
+--     genre_id INTEGER NOT NULL PRIMARY KEY,
+--     genre_type varchar(250)
+-- )
+
+-- INSERT INTO GENRE(genre_id,genre_type)
+
+-- VALUES
+-- (201	,"ACTION"),
+-- (202	,"COMEDY"),
+-- (203	,"THRILLER"),
+-- (204	,"ROMANTIC"),
+-- (205	,"TECHNICAL"),
+-- (206	,"HEALTH CARE"),
+-- (207	,"GAMING"),
+-- (208	,"MUSIC VIDEOS"),
+-- (209	,"TEASER"),
+-- (210	,"INSPIRATIONAL"),
+-- (211	,"SCI-FI");
+
+-- CREATE TABLE VIDEO_GENRE(
+--     video_id INTEGER,
+--     genre_id INTEGER,
+--     FOREIGN KEY (video_id) REFERENCES video(video_id),
+--     FOREIGN key (genre_id) REFERENCES GENRE(genre_id)
+-- )
+
+-- INSERT INTO VIDEO_GENRE(video_id,genre_id)
+
+-- VALUES 
+-- (1573	,205),
+-- (1574	,205),
+-- (1575	,205),
+-- (1576	,205),
+-- (1577	,205),
+-- (1578	,205),
+-- (1579	,205),
+-- (1580	,205),
+-- (1581	,205),
+-- (1582	,205),
+-- (1583	,205),
+-- (1584	,205),
+-- (1585	,205),
+-- (1586	,205),
+-- (1587	,205),
+-- (1588	,205),
+-- (1589	,205),
+-- (1590  ,205);
+
